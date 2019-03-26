@@ -1,11 +1,12 @@
 Package: quoter
 Type: Package
 Title: Well of Wisdom and a Source of Heartwarming Sentences
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
     person("Krzysztof", "Slomczynski", email = "krzysztofslomczynski@gmail.com", role = c("aut", "cre")),
     person("Alicja", "Gosiewska", email = "", role = "aut"),
-    person("Marcin", "Kosinski", email = "", role = "aut")
+    person("Marcin", "Kosinski", email = "", role = "aut"),
+    person("Mateusz", "Staniak", email = "", role = "aut")
     )
 Description: This is a tribute to a man whose actions had a positive impact on all our lives.
     When in need one can summon his sentences with a simple yet efficient function call.
