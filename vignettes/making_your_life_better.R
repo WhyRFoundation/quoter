@@ -5,8 +5,7 @@ knitr::opts_chunk$set(
 )
 
 ## ---- echo = FALSE, fig.align = "center"---------------------------------
-quotes <- readLines(system.file("extdata", "quotes.csv", package = "quoter"),
-                    encoding = "UTF-8")
+quotes <- quoter:::read_quotes()
 removed_punct <- gsub("[[:punct:]]", "", quotes)
 splitted_quotes <- unlist(strsplit(removed_punct, " "))
 wordcloud::wordcloud(splitted_quotes, runif(length(splitted_quotes)),
