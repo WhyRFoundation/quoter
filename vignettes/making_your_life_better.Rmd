@@ -1,0 +1,34 @@
+---
+title: "Making your life better"
+author: "Krzysztof Słomczyński"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Making your life better}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Just stare for some time at this mosaic of delightful words.
+
+```{r, echo = FALSE, fig.align = "center"}
+quotes <- readLines(system.file("extdata", "quotes.csv", package = "quoter"),
+                    encoding = "UTF-8")
+removed_punct <- gsub("[[:punct:]]", "", quotes)
+splitted_quotes <- unlist(strsplit(removed_punct, " "))
+wordcloud::wordcloud(splitted_quotes, runif(length(splitted_quotes)),
+                     c(0.8, 0.3))
+```
+
+Suddenly you can feel a presence of an awesome power. Now you are ready to cast a spell and summon one of the quotes.
+
+```{r}
+quoter::summon_quote()
+```
